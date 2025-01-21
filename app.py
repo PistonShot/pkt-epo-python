@@ -143,3 +143,4 @@ def get_pdf_items():
         return jsonify({"error": f"An unexpected error occurred: {e}"}), 500
 
 
+app.run(port=80)
