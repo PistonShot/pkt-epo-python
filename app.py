@@ -3,10 +3,10 @@ import requests
 import tempfile
 import pdfplumber
 import os
-
+from flask_cors import CORS
 # Initialize Flask app
 app = Flask(__name__)
-
+CORS(app)
 def extract_table_header(pdf_url):
     extracted_data = []
 
@@ -144,4 +144,4 @@ def get_pdf_items():
 
 # Run the Flask app
 if __name__ == '__main__':
-    app.run(debug=True,port=80)
+    app.run(debug="0.0.0.0",port=80)
