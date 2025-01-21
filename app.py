@@ -142,5 +142,6 @@ def get_pdf_items():
     except Exception as e:
         return jsonify({"error": f"An unexpected error occurred: {e}"}), 500
 
-
-app.run(port=80)
+# Run the Flask app
+if __name__ == '__main__':
+    app.run(debug=True,port=80)
