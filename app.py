@@ -77,10 +77,10 @@ def extract_table_data_from_url(pdf_url, table_id, selected_header_index):
 
                         # Append the extracted data to the list
                         extracted_data.append({
-                            "Name": name,
-                            "Quantity": quantity,
-                            "Unit Price": unit_price,
-                            "Total": total
+                            "name": name,
+                            "quantity": quantity,
+                            "unit_price": unit_price,
+                            "total": total
                         })
                     except (ValueError, IndexError):
                         # Skip rows with invalid data
